@@ -11,6 +11,12 @@ window.onload = function() {
     fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
       .then(response => response.json())
       .then(response => {
+        const card = document.querySelector('.card');
+        card.addEventListener('mouseover', function() {
+        card.addEventListener('click', function() {
+            window.location.href = response.url;
+        });
+    });
         document.getElementById('quote').innerHTML = response.content
         document.getElementById('author').innerHTML = "- " + response.originator.name
       })
@@ -20,6 +26,12 @@ window.onload = function() {
       fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
       .then(response => response.json())
       .then(response => {
+        const card = document.querySelector('.card');
+        card.addEventListener('mouseover', function() {
+        card.addEventListener('click', function() {
+            window.location.href = response.url;
+        });
+    });
         document.getElementById('quote').innerHTML = response.content
         document.getElementById('author').innerHTML = "- " + response.originator.name
       })
